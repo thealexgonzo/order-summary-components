@@ -3,40 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    />
+    /> -->
 
-    <title>Frontend Mentor | Order summary card</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Order summary card</title>
   </head>
   <body>
-    <h1>Order Summary</h1>
+    <section class="component-card">
+      <img
+        src="images/illustration-hero.svg"
+        class="hero-image"
+        alt="component card main image"
+      />
+      <h1 class="component-card__heading">Order Summary</h1>
 
-    You can now listen to millions of songs, audiobooks, and podcasts on any
-    device anywhere you like! Annual Plan $59.99/year Change Proceed to Payment
-    Cancel Order
+      <p class="component-card__main-text">
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Alejandro</a>.
-    </div>
+      <div class="component-card__selection">
+        <img
+          src="images/icon-music.svg"
+          class="selection__music-icon"
+          alt="music icon"
+        />
+        <p class="selection__description">
+          Annual Plan
+          <span class="selection__description--price">$59.99/year</span>
+        </p>
+        <a href="#" class="selection__change">Change</a>
+      </div>
+
+      <button class="component-card__payment-button">Proceed to Payment</button>
+      <p>Cancel Order</p>
+    </section>
   </body>
 </html>

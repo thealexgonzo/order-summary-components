@@ -12,8 +12,9 @@
   --color_5: #1e1fcd;
   --color_6: #382ae1;
   --color_7: #766cf1;
-  --container-shadow: rgba(13, 48, 189, 0.151826);
-  --payment_button-shadow: rgba(56, 42, 225, 0.190291);
+  --background-color: #e0e8ff;
+  --container-shadow: #0d30bd27;
+  --payment_button-shadow: #382ae130;
 
   --font_black: 900;
   --font_medium: 500;
@@ -26,8 +27,19 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #d6e1ff;
+  background-color: var(--background-color);
   font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+}
+
+.bg-image {
+  position: absolute;
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .background-section {
@@ -38,11 +50,11 @@ body {
 }
 
 .component-card {
-  width: 90%;
+  max-width: 34rem;
   text-align: center;
   background-color: var(--color_2);
   border-radius: 2rem;
-  box-shadow: 0 2rem 4rem -1rem var(--container-shadow);
+  box-shadow: 0 3rem 2.4rem -1rem var(--container-shadow);
 }
 
 .hero-image {
@@ -71,7 +83,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin: 2rem auto;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   border-radius: 1.1rem;
   width: 90%;
 }
@@ -84,6 +96,7 @@ body {
   font-size: 1.5rem;
   text-align: left;
   font-weight: var(--font_black);
+  margin-right: 10%;
 }
 
 .selection__description--price {
@@ -111,8 +124,7 @@ body {
   font-weight: var(--font_black);
   padding: 1.7rem 0;
   width: 80%;
-  margin: 0 auto;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem auto;
   border-radius: 1rem;
   cursor: pointer;
   box-shadow: 0 2rem 2rem var(--payment_button-shadow);
@@ -134,4 +146,51 @@ body {
 .component-card__cancel-order:hover {
   color: var(--color_1);
   cursor: pointer;
+}
+
+@media (min-width: 660px) {
+  .bg-image {
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+
+  .component-card {
+    max-width: 45rem;
+  }
+
+  .component-card__heading {
+    font-size: 2.8rem;
+    margin-top: 4rem;
+  }
+
+  .component-card__main-text {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    width: 80%;
+  }
+
+  .break {
+    display: none;
+  }
+
+  .component-card__selection {
+    margin: 2rem auto 3rem auto;
+    width: 80%;
+  }
+
+  .selection__description {
+    font-size: 1.6rem;
+    margin-right: 20%;
+  }
+
+  .selection__description--price {
+    font-size: 1.6rem;
+  }
+
+  .selection__change {
+    font-size: 1.4rem;
+  }
+
+  .selection__change {
+    font-size: 1.5rem;
+  }
 }
